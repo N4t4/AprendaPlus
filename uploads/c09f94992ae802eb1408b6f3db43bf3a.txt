@@ -1,0 +1,19 @@
+#Resumo: trabalho enteiro
+***Palavras Chave
+#Abstract: Resumo em inglês
+***Word Keys
+
+
+
+#Introdução
+	#Justificativa: Porque fazer o trabalho
+	#Objetivos: O que quer provar com trabalho
+	#Matériais e Métodos: matériais e metodos para alcançar os objetivos
+
+#Desenvolvimento
+ -> Conceitual:  Explicação
+ -> Discução: Teoria
+ -> Demostração
+
+ #Conclusão 
+ 

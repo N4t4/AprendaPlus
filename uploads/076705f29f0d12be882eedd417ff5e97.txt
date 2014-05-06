@@ -1,0 +1,70 @@
+-> Aula 16 - Cursores pg(380-382)
+ *Cursores são estruturas da linguagem SQL que perimtem o processamento das linhas retornadas por uma consulta(SELECT), utilizando estruturas presentes em linguagens de programação, como laços de repetição e comandos adicionais.
+ *O cursor é um objeto que aponta para uma determinada linha, retorna por yma instrução SELECT. Isso pertence que cada linha retornada por uma instrução SELECT possa ser tratada individualmente em resumo, os cursores são uma extenção que fernece mecanismo para se trabalhar com uma linha ou um bloco de linhas por vez.
+
+->Caracteristicas dos cursores
+ *Permitem o posicionamento em linhas específicas do conjunto de resultados.
+ *Recuperam uma linha ou bloco de linhas de posições atuais em um conjunto de resultados.
+ *Oferecem suporte às modições de dados nas linhas da posição atual do conjunto de resultados.
+ *Oferecem suporte a diferentes níveis de visibilidade as mudanças feitas por outros usuários ao banco de dados que são apresentados no conjunto de resutados.
+ *Fornecem instruções SQL em scripts e procedimentos armazenados.
+ *Adicionam o acesso de gatilho aos dados em um conjunto de resultados.
+
+-> O SQL server fornece TRÊS tipos de cursores.
+	*Cursores Transact-SQL
+	*Cursores de servidor De API
+	*Cursores de Clientes
+
+->Cursores Transact-SQL
+	*São criados utilizando as cláusulas DECLARE CURSOR sendo inseridos em scripts SQL, Stored Procedures e Triggers.
+	*Os cursores, dentro do SQL Server, são criados utilizando o comando DECLARE CURSOR e o conjunto de linhas para o qual um cursor aponta é definido pelo comando SELECT.
+	*Existem algumas restrições que o comando SELECT deve obdecer, ao se criar um cursor:
+			- não poderá retornar vários conjuntos de linhas
+			- não pode conter a cláusula INTO
+			- não pode conter as cláusulas compute ou COMPUTE BY
+
+-> Tipos de cursores do SQL-Server
+	*O T-SQL suporta quatro tipos de cursores.
+
+	- STATIC    \
+	- KeySET     |
+	- Dynamic		 > cada tipo armazena os dados de maneira difente.
+	- FIREHOSE 	/
+	
+ *STATIC   -> os cursores desse tipo fazem uma cópia dos dados especificados pela instrução SELECT e a armazena no banco de dados 
+ *TEMPDB   -> esse tipo de cursor não permite alteração nos valores que são retornados, sendo utilizados como somente leitura. Podem ser declarados como sendo do tipo "APENAS A FRENTE"/ (FORWARD ONLY) ou do tipo "rolável" (SCROLLABLE)
+ *KEYSET   -> esse cursor copia para o TEMPDB apenas de colunas necessárias para identificar exclusivamente cada linha. Para declarar um cursor desse tipo, cada tabela envolvida na instrução SELECT deve ter um índice exclusivo, que defina o conjunto de chaves a ser copiado os cursores do tipo KEYSET podem ser atualizáveis (UPDATABLE) ou somente leitura (READ ONLY) e também "Roláveis" (SCOLLABLE) ou "apenas para frente" (FORWARD ONLY)
+ *DYNAMIC  -> esse tipo de cursor comporta-se como se uma intruções SELECT fosse lançada novamente, sempre que a linha fosse referenciada. Cursores do tipo DYNAMIC reflitem as alterações de valores, inclusive nas linhas subjacentes, independentemente dessas alterações terem sido feitas pelo cursor ou por qualquer outro usuário.
+ *FIREHOSE -> esse tipo de cursor é declarado como sendo tipo FAST-FORWARD. O seu uso é condicionado a duas restrições.
+ 
+    'Se a instrução SELECT que define o cursor faz referência a colunas do tipo TEXT, NTEXT ou IMAGE, e conter a cláusula TOP, o cursor será convertido para o tipo KEYSET.
+		'Se a instrução SELECT combinar tabelas que contenham Triggers, o cursor será convertido para o tipo STATIC.
+		-> A linguagem T-SQL permite a criação de variáveis do tipo CURSOR!
+    'após um cursor ter sido criado, ele pode ser processado, utilizando comandos específicos;
+				*OPEN - Abre um cursor para uso.
+				*CLOSE - Fecha um cursor que estiver aberto
+				*DEALLOCATE - remove o indentificador do cursor
+				*FETCH - Manipula linhas armazenadas em um cursor
+
+-> Manipulando linahas com um cursor 
+	*O processamento por cursores envolve a recuperação de dados de uma linha por vez. Uma vez aberto, o cursor torna-se um conjunto de dados ativos. Esse conjunto contém um ponteiro linha "ATUAL". Assim, após a abertura, a linha atual é a primeira linha do cursor.
+	*Quando os dados da linha atual são recuperados pelo comando FETCH, OS valores são copiados nas variáveis so tipo cursor que foram previamente declaradas. Isso permite que os valores das linhas retornadas pela instrução SELECT sejam tratados, um de cada vez.
+	*após a recuperação dos dados da unha, o "ponteiro" passa para a próxima linha. Esse processo continua até que se chegue ao fim do cursor.
+  *Os cursores possem atributos especiais, que sevem para informar a quantidade de linhas existentes no conjunto de dados.
+*O SQL-Server suporta três comandos diferentes para trabalhar com cursores.
+
+		- FETCH -> Recupera uma linha específica do conjunto do cursor
+		- UPDATE
+		- DELETE
+	-> O Comando FETCH pode ser complementado com uma combinação de pelavras:
+	
+	- FETCH FIRST      -> Retorna a primeira linha da variável.
+	- FETCH NEXT       -> Retorna a linha seguinte.
+	- FETCH PRIOR      -> Retorna a linha anterior.
+	- FETCH RELATIVE n -> Retorna a linha n.
+	- FETCH ABSOLUNT n -> Pode especificar linhas antes da linha atual.
+	
+->MONITORAMENTO DOS Cursores
+ 
+	
+	

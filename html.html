@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+	<!--<link rel="stylesheet" href="css/style.css" />-->
+	<!--<link rel="stylesheet" href="css/global.css" />-->
+	<script src="js/jquery.js"></script>
+	<script src="js/nt-class.js"></script>
+	<script src="js/global.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+
+		#board{
+			width: 640px;
+			height: 480px;
+			background-color: #FFFFFF;
+			box-shadow: 0px 0px 8px black;
+			z-index: 1;
+		}
+
+		.color1{
+			background-color: #8EA6AF;
+		}
+		.color1-hover:hover{
+			background-color: #8EA6AF;
+		}
+
+		#menu-top{
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-bottom: solid 1px black; 
+			z-index: 2;
+		}
+		#menu-top img{
+			height: 28px;
+			margin: 5px;
+			float: right;
+		}
+		#menu-top>ul{
+			width: 400px;
+			display: block;
+			margin: 0;
+			float: left;
+			list-style: none;
+		}
+		#menu-top>ul>li{
+			float: left;
+		}
+		#menu-top>ul>li a{
+			padding: 5px;
+			margin-top: 5px;
+			margin-left: 5px;
+			text-decoration: none;
+			display: block;
+			border: solid 1px;
+		}
+		#menu-top>ul>li>a:hover{
+			text-decoration: none;
+			border: solid 1px white; 
+		}
+		#menu-top>ul>li>a:active{
+			text-decoration: none;
+			border: solid 1px black;
+			background-color: white; 
+		}
+
+		#menu-top>ul>li>.at{
+			background-color: white;
+			border-bottom: none;
+			position: absolute;
+			z-index: 2;
+			border-color: black;
+		}
+		#menu-top>ul>li>.at:hover{
+			border-color: black;
+			border: 
+		}
+		#menu-top>ul>li>ul{
+			z-index: 1;
+			list-style: none;
+			top: 32px;
+			position: absolute;
+			border: solid 1px; 
+			margin-left: 5px;
+			margin-top: -1px;
+			background-color: white;
+		}
+		#menu-top>ul>li>ul>li>a{
+			margin: 0;
+			border: none;
+
+		}
+
+		#menu-bottom{
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			border-top: solid 1px black; 
+			z-index: 2;
+			box-shadow: 0px -2px 8px black;
+		}
+
+		*{
+			color: black;
+		}
+
+		.invisivel{
+			display: none;
+		}
+
+		.list-elementos{
+			background-color: #000;
+			list-style: none;
+		}
+		.list-elementos>li{
+			float: left;
+
+		}
+		.list-elementos>._li{
+			float: left;
+		}
+		.list-elementos>li>img{
+			margin:3px;
+		}
+
+	</style>
+</head>
+<body>
+
+	<header id="menu-top" class="color1">
+		<ul>
+			<li><a href="#" onclick="Bonclick(this);">Projeto</a></li>
+			<li><a href="#">Ferramentas</a></li>
+			
+			<li>
+				<a href="#">Ferramentas</a>
+				<ul>
+					<li><a href="#" class="color1-hover">Elementos</a></li>
+					<li><a href="#" class="color1-hover">Ferramentas</a></li>		
+				</ul>		
+			</li>
+
+		</ul>
+		<img src="img/Aprenda.jpg">
+	</header>
+	
+	<section id="board" class="in-center color1">
+
+	</section>
+	
+	<footer id="menu-bottom" class="color1">
+	Pi
+	</footer>
+
+	<!Invisivel!>
+	
+	<div class="invisivel">
+		<div id="elementos">
+			<ul class="list-elementos drag">
+				<li class="_li"><img src="img/it-text.png"></li>
+				<li><img src="img/it-img.png"></li>
+				<li><img src="img/it-img.png"></li>
+				<li><img src="img/it-img.png"></li>
+			</ul>
+		</div>
+
+	</div>
+
+	<!FIM-Invisivel!>
+
+	
+	<!--javaScript-->  
+	<script src="js/script.js"></script>
+	<script type="text/javascript">
+
+	$(document).ready(function() {
+
+		$("#menu-top>ul>li>ul").css("display","none");
+
+		$("#menu-top>ul>li").each(function(index){
+			if($(this).find("ul").length > 0){
+				$(this).click(function() {
+					if($(this).find(".at").length == 0){
+						$(this).children("a").addClass("at");
+						$(this).children("ul").show(500);
+					} else {
+						$(this).children("a").removeClass("at");
+						$(this).children("ul").hide(250);
+					}
+				});
+			}
+		});
+		
+	});
+
+	function Bonclick(){
+		
+		fm_padrao = new FormPadrao();
+
+		fm_padrao.Open({
+			title:  "Elementos",
+			save_label: "Salvar",
+			data:   $("#elementos").html(),
+			//close:  function(){ alert("close"); },
+			width: 144,
+			height: 70,
+			move :true,
+			resize: true,
+			end_open: function(){ DragInit(); }
+		});
+
+	}
+
+	</script>
+
+
+</body>
+
+</html>
+
+
+

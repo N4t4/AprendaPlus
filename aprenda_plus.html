@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/global.css" />
+	<link href='http://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+	<script src="js/jquery.js"></script>
+	<script src="js/nt-class.js"></script>
+	<script src="js/global.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		
+		html{
+			overflow: auto;
+			font-family: arial,sans-serif;
+			/*font-family: 'VT323', arial;*/
+			font-family: arial;
+		}
+		body{
+			background: url('img/bg.jpg') no-repeat fixed 100% 100%;
+			overflow: hidden;
+		}
+		body>section{
+			padding-left: 10px;
+			padding-top: 10px;
+			padding-bottom: 30px;
+			margin-top: 60px;
+		}
+		body>footer{
+			height: 40px;
+			background-color: #364044;
+			position: relative;
+			padding-left: 10px;
+			padding-top: 10px;
+			color: #7091BE;
+			left: 0;
+		}
+
+		#menu-top{
+			background-color: #364044;
+			overflow: auto;
+			position: fixed;
+			height: 68px;
+			left: 0;
+		}
+		#menu-top>nav>ul{
+			list-style: none;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+		#menu-top>nav>ul>li{
+			float: right;
+		}
+		#menu-top>nav>ul>li>a{
+			padding: 10px;
+			display: block;
+			color: #7091BE;
+			padding-bottom: 10px;
+		}
+		#menu-top>nav>ul>li>a:hover{
+			background-color: #7091BE;
+			color: #364044;
+		}
+		#menu-top #search{
+			background-color: red;
+			margin-top: 6px;
+			overflow: hidden;
+			margin-right: 20px;
+			margin-left: 20px;
+		}
+		#menu-top #search input[type="button"]{
+			background-color: #F0F0F0;
+			background-image: url(img/pesq-icon.png);
+			width: 20px;
+			height: 20px;
+			border: none;
+			float: left;
+			background-color: #364044;
+		}
+		#menu-top #search input[type="text"]{
+			border: none;
+		}
+		#menu-top .off{
+			font-style: italic;
+			color: rgb(148, 148, 148);
+		}
+
+
+		#sidebar-left{
+			background-color: #364044;
+			display: block;
+			padding-top: 10px;
+			margin-top: 6px;
+			margin-left: -5px;
+			overflow: hidden;
+			/*position: fixed;*/
+		}
+		#sidebar-left ul{
+			list-style: none;
+			overflow: hidden;
+		}
+		#sidebar-left>ul>li>a{
+			background-color: #364044;
+			display: block;
+		}
+		#sidebar-left>ul>li>a{
+			padding-left: 5px;
+			color: #7091BE;
+		}
+		#sidebar-left>ul>li>ul>li{
+			background-color: #7091BE;
+			padding-left: 10px;
+		}
+		#sidebar-left>ul>li>ul>li>a{
+			color: #F0F0F0
+		}
+		.article-aula{
+			border-top: solid 1px #7091BE;
+			border-bottom: solid 1px #496FA0;
+			padding-top: 14px;
+			padding-bottom: 12px;
+			padding-left: 10px;
+			margin-top: 5px;
+			overflow: hidden;
+		}
+		.article-aula img{
+			border: solid 1px;
+			padding: 5px;
+			border-top: solid 1px #7091BE;
+			border-bottom: solid 1px #496FA0;
+			border-left: solid 1px #7091BE;
+			border-right: solid 1px #496FA0;
+			float: left;
+			margin-right: 5px;
+		}
+
+		.article-aula p{
+			display: block;
+			padding: 14px;
+		}
+
+		.color3{
+			background-color: yellowgreen;
+		}
+		.light{
+			background-color: #F0F0F0;
+		}
+		.dark{
+
+		}
+
+		.robot{
+			position: fixed;
+			top: 999;
+		}
+
+	</style>
+</head>
+<body class="color3">
+
+	<header class="wspan12" id="menu-top">
+		<a href=""><img src="img/aprenda-plus.png" height="52px" style="margin: 6px;"></a>
+		<nav>
+			<ul>
+				<li id="search"><p><input type="button"><input type="text" value="pesquisar..." class="off" style="width: 75px;"></p></li>
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">HOME</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<section class="offwspan1 wspan9">
+
+		<nav id="sidebar-left" class="wspan3 toLeft">
+			<ul>
+				<li>
+					<a href="#">MATEMATICA</a>
+					<ul>
+						<li><a href="#">G1</a></li>
+						<li><a href="#">G2</a></li>
+						<li><a href="#">G3</a></li>
+						<li><a href="#">G4</a></li>
+					</ul>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<a href="#">PORTUGUES</a>
+					<ul>
+						<li><a href="#">G1</a></li>
+						<li><a href="#">G2</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+		<section class="offwspan3 wspan9">
+			
+			<article class="article-aula light">
+				<header>
+					<h2>Title</h2>
+					<img src="img/img1.png">
+				</header>
+				<section>
+					<p>bla bla bla bla</p>
+				</section>
+			</article>
+
+			<article class="article-aula wspan6 light to-center">
+				<header>
+					<h2>Title</h2>
+					<img src="img/img1.png">
+				</header>
+				<section>
+					<p>bla bla bla bla</p>
+				</section>
+			</article>
+
+			<article class="article-aula light">
+				<header>
+					<h2>Title</h2>
+					<img src="img/img1.png">
+				</header>
+				<section>
+					<p>bla bla bla bla</p>
+				</section>
+			</article>
+
+		</section>	
+	</section>
+	
+	<footer class="wspan12">
+		<p>Aprenda</p>
+	</footer>
+
+	<div class="robot">
+		<img src="img/bot.png">
+	</div>
+
+	<!--javaScript-->  
+	<script src="js/script.js"></script>
+	<script type="text/javascript">
+
+	$(document).ready(function() {
+		
+		$('#search input[type="text"]').focus(function(){
+			$(this).removeClass("off");
+			$(this).val("");
+			$(this).animate(
+				{width: 150},
+				500
+			);
+		});
+		$('#search input[type="text"]').focusout(function(){
+			if($(this).val() == "")
+			{
+				$(this).addClass("off");
+				$(this).val("Pesquisar...");
+				$(this).animate(
+					{width: 75},
+					250
+				);
+			}
+		});
+
+		$('#sidebar-left>ul>li>ul').each(function() {
+			$(this).attr("tm", $(this).height()+"px");	
+		});
+
+		$('#sidebar-left>ul>li>ul').animate({"height": 0}, 500);
+		$('#sidebar-left>ul>li>ul').attr("view",false);
+
+		$('#sidebar-left>ul>li>a').click(function(){
+
+			var ul = $(this).parent().parent().find("ul");
+
+			if(ul.css("height") == "0px"){
+				ul.animate({"height": ul.attr("tm")}, 500);
+				$('#sidebar-left>ul>li>ul').attr("view",true);
+			}
+			else {
+				ul.animate({"height": 0}, 500);
+				$('#sidebar-left>ul>li>ul').attr("view",false);
+			}
+
+		});
+
+
+	});
+
+	</script>
+
+
+</body>
+
+</html>
+
+
+
