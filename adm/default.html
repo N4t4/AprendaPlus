@@ -3,23 +3,24 @@
 <html lang="pt-br">
 
 <head>
-	<link rel="stylesheet" href="css/style.css" />
-	<link rel="stylesheet" href="css/global.css" />
+	<link rel="stylesheet" href="../css/style.css" />
+	<link rel="stylesheet" href="../css/global.css" />
 	<link href='http://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
-	<script src="js/jquery.js"></script>
-	<script src="js/nt-class.js"></script>
-	<script src="js/global.js"></script>
+	<script src="../js/jquery.js"></script>
+	<script src="../js/nt-class.js"></script>
+	<script src="../js/global.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style type="text/css">
 		
 		html{
 			overflow: auto;
+			overflow-x: hidden;
 			font-family: arial,sans-serif;
 			/*font-family: 'VT323', arial;*/
 			font-family: arial;
 		}
 		body{
-			background: url('img/bg.jpg') no-repeat fixed 100% 100%;
+			background: url('../img/bg.jpg') no-repeat fixed 100% 100%;
 			overflow: hidden;
 		}
 		body>section{
@@ -40,7 +41,7 @@
 
 		.bt1_tm1{
 			background: none;
-			background-image: url("img/bt1-t1.png");
+			background-image: url("../img/bt1-t1.png");
 			width: 155px;
 			height: 55px;
 			border: none;
@@ -49,7 +50,6 @@
 		}
 
 		#menu-top{
-			background-color: #364044;
 			overflow: auto;
 			position: fixed;
 			height: 68px;
@@ -84,7 +84,7 @@
 		}
 		#menu-top #search input[type="button"]{
 			background-color: #F0F0F0;
-			background-image: url(img/pesq-icon.png);
+			background-image: url(../img/pesq-icon.png);
 			width: 20px;
 			height: 20px;
 			border: none;
@@ -174,85 +174,63 @@
 			top: 80px;
 		}
 
+		/************Local*/
+
+		body>footer{
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+		}
+
+		html,body{
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+
+		table{
+			width: 100%;
+		}
+		table>tbody>tr>td:first-child{
+			text-align: right;
+			min-width: 35%;
+		}
+
+		#login{
+			box-shadow: 0 0 15px;
+		}
+
 	</style>
 </head>
 <body class="color3">
 
 	<header class="wspan12" id="menu-top">
-		<a href=""><img src="img/aprenda-plus.png" height="52px" style="margin: 6px;"></a>
-		<nav>
-			<ul>
-				<li id="search"><p><input type="button"><input type="text" value="pesquisar..." class="off" style="width: 75px;"></p></li>
-				<li><a href="#">HOME</a></li>
-				<li><a href="#">HOME</a></li>
-				<li></li>
-			</ul>
-			<div id="status">
-				<input type="button" value="Cadastre-se" class="bt1_tm1" onclick="document.header('www.nata.com');">
-			</div>
-		</nav>
+		<a href=""><img src="../img/aprenda-plus.png" height="52px" style="margin: 6px;"></a>
 	</header>
 	
-	<section class="offwspan1 wspan9">
+	<section class="offwspan4 offhspan2 wspan3 border-color1" id="login">
+		<h1><img src="../img/login.png"></h1>
+		<section>
 
-		<nav id="sidebar-left" class="wspan3 toLeft">
-			<h2 class="text-color2">Disciplinas</h2>
-			<ul>
-				<li>
-					<a href="#" style="color: red;">MATEM&Aacute;TICA</a>
-					<ul>
-						<li><a href="#">G1</a></li>
-						<li><a href="#">G2</a></li>
-						<li><a href="#">G3</a></li>
-						<li><a href="#">G4</a></li>
-					</ul>
-				</li>
-			</ul>
-			<ul>
-				<li>
-					<a href="#" style="color: yellow;">PORTUGUES</a>
-					<ul>
-						<li><a href="#">G1</a></li>
-						<li><a href="#">G2</a></li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
-
-		<section class="offwspan3 wspan9">
-		
-			<h1><img src="img/time-line.png"></h1>
-
-			<article class="article-aula light">
-				<header>
-					<h2 style="color: red;">N&uacute;meros romanos</h2>
-					<img src="img/img1.png">
-				</header>
-				<section>
-					<p>O sistema de numeracao romana (ou números romanos) desenvolveu-se na Roma Antiga e utilizou-se em todo o seu Império. Ele é composto por sete letras maiúsculas do alfabeto latim: I, V, X, L, C, D e M.</p>
-				</section>
-			</article>
-
-			<article class="article-aula wspan6 light to-center">
-				<header>
-					<h2 style="color: yellow;">Vogais</h2>
-					<img src="img/img1.png">
-				</header>
-				<section>
-					<p>bla bla bla bla</p>
-				</section>
-			</article>
-
-			<article class="article-aula light">
-				<header>
-					<h2 style="color: red;">Adi&ccedil;&atilde;o</h2>
-					<img src="img/img1.png">
-				</header>
-				<section>
-					<p>bla bla bla bla</p>
-				</section>
-			</article>
-
+			<table>
+				<tbody>
+					<tr>
+						<td><strong class="text-color2">E-mail:</strong></td>
+						<td><input type="text"></td>
+					</tr>
+					<tr>
+						<td><strong class="text-color2">Senha:</strong></td>
+						<td><input type="password"></td>
+					</tr>
+					
+					<tr>
+						<td colspan="2">
+							<input type="button" value="Entrar" class="bt1_tm1 toRight" onclick="document.header('www.nata.com');">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
 		</section>	
 	</section>
 	
@@ -269,50 +247,6 @@
 	<script type="text/javascript">
 
 	$(document).ready(function() {
-		
-		$('#search input[type="text"]').focus(function(){
-			$(this).removeClass("off");
-			$(this).val("");
-			$(this).animate(
-				{width: 150},
-				500
-			);
-		});
-		$('#search input[type="text"]').focusout(function(){
-			if($(this).val() == "")
-			{
-				$(this).addClass("off");
-				$(this).val("Pesquisar...");
-				$(this).animate(
-					{width: 75},
-					250
-				);
-			}
-		});
-
-		$('#sidebar-left>ul>li>ul').each(function() {
-			$(this).attr("tm", $(this).height()+"px");	
-		});
-
-		$('#sidebar-left>ul>li>ul').animate({"height": 0}, 500);
-		$('#sidebar-left>ul>li>ul').attr("view",false);
-
-		$('#sidebar-left>ul>li>a').click(function(){
-
-			var ul = $(this).parent().parent().find("ul");
-
-			if(ul.css("height") == "0px"){
-				ul.animate({"height": ul.attr("tm")}, 500);
-				$('#sidebar-left>ul>li>ul').attr("view",true);
-			}
-			else {
-				ul.animate({"height": 0}, 500);
-				$('#sidebar-left>ul>li>ul').attr("view",false);
-			}
-
-		});
-
-
 	});
 
 	</script>

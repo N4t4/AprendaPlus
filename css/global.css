@@ -1,21 +1,23 @@
 body, html{
-	background-color: #F0F0F0;
 	color: #000000;
 	margin:  0;
 	padding: 0;
-	overflow: hidden;
 }
 *{
 	margin:  0;
 	padding: 0;
 }
 
+h1{
+	font-size:  28px;
+}
+
 input[type="email"],
 input[type="password"],
+input[type="date"],
 input[type="text"]{
-	border: solid 1px #000000; 
 	font-size: 14px;
-	padding: 2px;
+	padding: 4px;
 }
 input[type="email"]:focus,
 input[type="password"]:focus,
@@ -23,83 +25,6 @@ input[type="text"]:focus{
 	border: solid 1px #D07F26;
 }
 
-.error{
-	display: block;
-	color: #E03810;
-	word-wrap: break-word;
-}
-
-.wspan12{width:100%;    *width:99.94680851063829%}
-.wspan11{width:91.633%; *width:91.43617021276594%}
-.wspan10{width:83.33%;  *width:82.92553191489361%}
-.wspan9{ width:75%;     *width:74.41489361702126%}
-.wspan8{ width:66.66%;  *width:65.90425531914893%}
-.wspan7{ width:58.33%;  *width:57.39361702127659%}
-.wspan6{ width:50%;     *width:48.88297872340425%}
-.wspan5{ width:41.67%;  *width:40.37234042553192%}
-.wspan4{ width:33.333%; *width:31.861702127659576%}
-.wspan3{ width:25%;     *width:23.351063829787233%}
-.wspan2{ width:16.66%;  *width:14.840425531914894%}
-.wspan1{ width:8.333%;  *width:6.329787234042553%}
-
-.hspan12{height:100%;    *height:99.94680851063829%}
-.hspan11{height:91.633%; *height:91.43617021276594%}
-.hspan10{height:83.33%;  *height:82.92553191489361%}
-.hspan9{ height:75%;     *height:74.41489361702126%}
-.hspan8{ height:66.66%;  *height:65.90425531914893%}
-.hspan7{ height:58.33%;  *height:57.39361702127659%}
-.hspan6{ height:50%;     *height:48.88297872340425%}
-.hspan5{ height:41.67%;  *height:40.37234042553192%}
-.hspan4{ height:33.333%; *height:31.861702127659576%}
-.hspan3{ height:25%;     *height:23.351063829787233%}
-.hspan2{ height:16.66%;  *height:14.840425531914894%}
-.hspan1{ height:8.333%;  *height:6.329787234042553%}
-
-
-.offwspan12{margin-left:100%;    *margin-left:99.94680851063829%}
-.offwspan11{margin-left:91.633%; *margin-left:91.43617021276594%}
-.offwspan10{margin-left:83.33%;  *margin-left:82.92553191489361%}
-.offwspan9{ margin-left:75%;     *margin-left:74.41489361702126%}
-.offwspan8{ margin-left:66.66%;  *margin-left:65.90425531914893%}
-.offwspan7{ margin-left:58.33%;  *margin-left:57.39361702127659%}
-.offwspan6{ margin-left:50%;     *margin-left:48.88297872340425%}
-.offwspan5{ margin-left:41.67%;  *margin-left:40.37234042553192%}
-.offwspan4{ margin-left:33.333%; *margin-left:31.861702127659576%}
-.offwspan3{ margin-left:25%;     *margin-left:23.351063829787233%}
-.offwspan2{ margin-left:16.66%;  *margin-left:14.840425531914894%}
-.offwspan1{ margin-left:8.333%;  *margin-left:6.329787234042553%}
-.offwspan1_2{ margin-left:4.165%;  *margin-top:6.329787234042553%}
-
-.offhspan12{margin-top:100%;    *margin-top:99.94680851063829%}
-.offhspan11{margin-top:91.633%; *margin-top:91.43617021276594%}
-.offhspan10{margin-top:83.33%;  *margin-top:82.92553191489361%}
-.offhspan9{ margin-top:75%;     *margin-top:74.41489361702126%}
-.offhspan8{ margin-top:66.66%;  *margin-top:65.90425531914893%}
-.offhspan7{ margin-top:58.33%;  *margin-top:57.39361702127659%}
-.offhspan6{ margin-top:50%;     *margin-top:48.88297872340425%}
-.offhspan5{ margin-top:41.67%;  *margin-top:40.37234042553192%}
-.offhspan4{ margin-top:33.333%; *margin-top:31.861702127659576%}
-.offhspan3{ margin-top:25%;     *margin-top:23.351063829787233%}
-.offhspan2{ margin-top:16.66%;  *margin-top:14.840425531914894%}
-.offhspan1{ margin-top:8.333%;  *margin-top:6.329787234042553%}
-.offhspan1_2{ margin-top:4.165%;  *margin-top:6.329787234042553%}
-
-.toRight{
-	float: right;
-}
-.toLeft{
-	float: left;
-}
-
-.to-center{
-	margin: auto;
-	display: block;
-}
-
-@media (max-width: 480px) {
-}
-@media (min-width: 480px) {
-}
 .act{
 	border: solid 1px #FFFFFF;
 	cursor: pointer;
@@ -411,3 +336,121 @@ input[type="text"]:focus{
 	min-width: 150px;
 	padding: 5px;
 }
+
+.border-color1{
+	border: solid 1px #7091BE;
+}
+
+.error{
+	display: block;
+	color: #E03810;
+	word-wrap: break-word;
+}
+
+.wspan12{width:100%;    *width:99.94680851063829%}
+.wspan11{width:91.633%; *width:91.43617021276594%}
+.wspan10{width:83.33%;  *width:82.92553191489361%}
+.wspan9{ width:75%;     *width:74.41489361702126%}
+.wspan8{ width:66.66%;  *width:65.90425531914893%}
+.wspan7{ width:58.33%;  *width:57.39361702127659%}
+.wspan6{ width:50%;     *width:48.88297872340425%}
+.wspan5{ width:41.67%;  *width:40.37234042553192%}
+.wspan4{ width:33.333%; *width:31.861702127659576%}
+.wspan3{ width:25%;     *width:23.351063829787233%}
+.wspan2{ width:16.66%;  *width:14.840425531914894%}
+.wspan1{ width:8.333%;  *width:6.329787234042553%}
+
+.hspan12{height:100%;    *height:99.94680851063829%}
+.hspan11{height:91.633%; *height:91.43617021276594%}
+.hspan10{height:83.33%;  *height:82.92553191489361%}
+.hspan9{ height:75%;     *height:74.41489361702126%}
+.hspan8{ height:66.66%;  *height:65.90425531914893%}
+.hspan7{ height:58.33%;  *height:57.39361702127659%}
+.hspan6{ height:50%;     *height:48.88297872340425%}
+.hspan5{ height:41.67%;  *height:40.37234042553192%}
+.hspan4{ height:33.333%; *height:31.861702127659576%}
+.hspan3{ height:25%;     *height:23.351063829787233%}
+.hspan2{ height:16.66%;  *height:14.840425531914894%}
+.hspan1{ height:8.333%;  *height:6.329787234042553%}
+
+
+.offwspan12{margin-left:100%;    *margin-left:99.94680851063829%}
+.offwspan11{margin-left:91.633%; *margin-left:91.43617021276594%}
+.offwspan10{margin-left:83.33%;  *margin-left:82.92553191489361%}
+.offwspan9{ margin-left:75%;     *margin-left:74.41489361702126%}
+.offwspan8{ margin-left:66.66%;  *margin-left:65.90425531914893%}
+.offwspan7{ margin-left:58.33%;  *margin-left:57.39361702127659%}
+.offwspan6{ margin-left:50%;     *margin-left:48.88297872340425%}
+.offwspan5{ margin-left:41.67%;  *margin-left:40.37234042553192%}
+.offwspan4{ margin-left:33.333%; *margin-left:31.861702127659576%}
+.offwspan3{ margin-left:25%;     *margin-left:23.351063829787233%}
+.offwspan2{ margin-left:16.66%;  *margin-left:14.840425531914894%}
+.offwspan1{ margin-left:8.333%;  *margin-left:6.329787234042553%}
+.offwspan1_2{ margin-left:4.165%;  *margin-top:6.329787234042553%}
+
+.offhspan12{margin-top:100%;    *margin-top:99.94680851063829%}
+.offhspan11{margin-top:91.633%; *margin-top:91.43617021276594%}
+.offhspan10{margin-top:83.33%;  *margin-top:82.92553191489361%}
+.offhspan9{ margin-top:75%;     *margin-top:74.41489361702126%}
+.offhspan8{ margin-top:66.66%;  *margin-top:65.90425531914893%}
+.offhspan7{ margin-top:58.33%;  *margin-top:57.39361702127659%}
+.offhspan6{ margin-top:50%;     *margin-top:48.88297872340425%}
+.offhspan5{ margin-top:41.67%;  *margin-top:40.37234042553192%}
+.offhspan4{ margin-top:33.333%; *margin-top:31.861702127659576%}
+.offhspan3{ margin-top:25%;     *margin-top:23.351063829787233%}
+.offhspan2{ margin-top:16.66%;  *margin-top:14.840425531914894%}
+.offhspan1{ margin-top:8.333%;  *margin-top:6.329787234042553%}
+.offhspan1_2{ margin-top:4.165%;  *margin-top:6.329787234042553%}
+
+.toRight{
+	float: right;
+}
+.toLeft{
+	float: left;
+}
+.toCenter{
+	float: none;
+	margin: auto;
+	display: block;
+}
+
+.to-center{
+	margin: auto;
+	display: block;
+}
+
+/*
+	Aprenda Plus
+
+	Cor 1: #7091BE | Azul;
+	Cor 2: #364044 | Cinza Escuro;
+	Cor 3: #F0F0F0 | Cinza Claro;
+	Cor 4: #22b14C | Verde;
+
+*/
+
+.bg-img1{ background-image: url("../img/bg.jpg"); }
+
+.bg-color1{	background-color: #7091BE; }
+.bg-color2{	background-color: #364044; }
+.bg-color3{	background-color: #F0F0F0; }
+.bg-color4{	background-color: #22b14C; }
+
+.border-color1, .border-color2, .border-color3{ border-radius: 4px; }
+.border-color1{	bottom: solid 1px #7091BE; }
+.border-color2{	bottom: solid 1px #364044; }
+.border-color3{	bottom: solid 1px #F0F0F0; }
+.border-color4{	bottom: solid 1px #22b14C; }
+
+.text-color1{ color: #7091BE;}
+.text-color2{ color: #364044;}
+.text-color3{ color: #F0F0F0;}
+.text-color4{ color: #22b14C;}
+
+.hover-text-color1:hover{ color: #7091BE; }
+.hover-text-color2:hover{ color: #364044; }
+.hover-text-color3:hover{ color: #F0F0F0; }
+.hover-text-color4:hover{ color: #22b14C; }
+
+@media (max-width: 480px) {}
+@media (min-width: 480px) {}

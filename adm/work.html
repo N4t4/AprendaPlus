@@ -1,0 +1,249 @@
+<!teste do git!>
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+	<link rel="stylesheet" href="../css/style.css" />
+	<link rel="stylesheet" href="../css/global.css" />
+	<link href='http://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+	<script src="../js/jquery.js"></script>
+	<script src="../js/nt-class.js"></script>
+	<script src="../js/global.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		
+
+		.bt1_tm1{
+			background: none;
+			background-image: url("../img/bt1-t1.png");
+			width: 155px;
+			height: 55px;
+			border: none;
+			font-weight: bolder;
+			color: #F0F0F0;
+		}
+
+		#menu-top{
+			overflow: auto;
+			position: fixed;
+			height: 68px;
+			left: 0;
+		}
+		#menu-top>nav>ul{
+			list-style: none;
+			position: absolute;
+			padding-bottom: 5px;
+			bottom: 0;
+			right: 0;
+		}
+		#menu-top>nav>ul>li{
+			float: right;
+		}
+		#menu-top>nav>ul>li>a{
+			padding: 10px;
+			display: block;
+			color: #7091BE;
+			padding-bottom: 10px;
+		}
+		#menu-top>nav>ul>li>a:hover{
+			background-color: #7091BE;
+			color: #364044;
+		}
+		#menu-top #search{
+			background-color: white;
+			margin-top: 6px;
+			overflow: hidden;
+			margin-right: 20px;
+			margin-left: 20px;
+		}
+		#menu-top #search input[type="button"]{
+			background-color: #F0F0F0;
+			background-image: url(../img/pesq-icon.png);
+			width: 20px;
+			height: 20px;
+			border: none;
+			float: left;
+			background-color: #364044;
+		}
+		#menu-top #search input[type="text"]{
+			border: none;
+		}
+		#menu-top .off{
+			font-style: italic;
+			color: rgb(148, 148, 148);
+		}
+
+		#status{
+			position: absolute;
+			top: 5px;
+			left: 200px;
+		}
+
+
+		#sidebar-left{
+			display: block;
+			padding-top: 10px;
+			margin-top: 6px;
+			margin-left: -5px;
+			overflow: hidden;
+			/*position: fixed;*/
+		}
+		#sidebar-left h2{
+			color: white;
+		}
+		#sidebar-left ul{
+			list-style: none;
+			overflow: hidden;
+		}
+		#sidebar-left>ul>li>a{
+			background-color: #364044;
+			display: block;
+		}
+		#sidebar-left>ul>li>a{
+			padding-left: 5px;
+			color: #7091BE;
+		}
+		#sidebar-left>ul>li>ul>li{
+			background-color: #7091BE;
+			padding-left: 10px;
+		}
+		#sidebar-left>ul>li>ul>li>a{
+			color: #F0F0F0
+		}
+		.article-aula{
+			border-top: solid 1px #7091BE;
+			border-bottom: solid 1px #496FA0;
+			padding-top: 14px;
+			padding-bottom: 12px;
+			padding-left: 10px;
+			margin-top: 5px;
+			overflow: hidden;
+		}
+		.article-aula img{
+			border: solid 1px;
+			padding: 5px;
+			border-top: solid 1px #7091BE;
+			border-bottom: solid 1px #496FA0;
+			border-left: solid 1px #7091BE;
+			border-right: solid 1px #496FA0;
+			float: left;
+			margin-right: 5px;
+		}
+		.article-aula p{
+			display: block;
+			padding: 14px;
+		}
+
+		.color3{
+			background-color: yellowgreen;
+		}
+		.light{
+			background-color: #F0F0F0;
+		}
+		.dark{
+		}
+
+		.robot{
+			position: fixed;
+			top: 80px;
+		}
+
+		/************Local*/
+
+		body,html{
+			background-color: #f0f0f0;
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+			font-family: arial,sans-serif;
+			/*font-family: 'VT323', arial;*/
+			font-family: arial;
+		}
+		
+		body>nav>ul{
+			text-align: center;
+			padding-top: 60px;
+		}
+		body>nav>ul a{
+			font-size: 18px;
+			font-weight: bold;
+		}
+		body>nav>ul li{
+			margin-top: 18px;
+		}
+		
+		body>section>div{
+			width: 98%;
+			margin-left: 1%;
+		}
+
+		body>footer{
+			width: 100%;
+			height: 40px;
+			position: absolute;
+			bottom: 0;	
+			padding-left: 10px;
+			padding-top: 10px;
+			color: #7091BE;
+			left: 0;
+			background-position: 0 -1020px;
+		}
+
+		h2{
+			color: #22b14c;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			margin-left: 30px;
+		}
+
+
+	</style>
+</head>
+<body class="color3">
+
+	<header class="toLeft wspan12 bg-img1">
+		<a href=""><img src="../img/aprenda-plus.png" height="52px" style="margin: 6px;"></a>
+	</header>
+	
+	<nav class="wspan3 hspan10 toLeft bg-color1">
+		<ul>
+			<li ><a class="text-color1 hover-text-color2" href="#">Cadastrar Aluno</a></li>
+			<li ><a class="text-color1 hover-text-color2" href="#">Item2</a></li>
+			<li ><a class="text-color1 hover-text-color2" href="#" >Item3</a></li>
+			<li ><a class="text-color1 hover-text-color2" href="#">Item4</a></li>
+			<li ><a class="text-color1 hover-text-color2" href="#">Item5</a></li>
+			<li ><a class="text-color1 hover-text-color2" href="#">Sobre</a></li>
+		</ul>
+	</nav>
+	
+	<section class="wspan9 hspan10 toLeft bg-color2">
+		<h2>Cadastrar aluno</h2>
+		<div class="content border-color1">
+			oi
+		</div>
+	</section>
+	
+	<footer class="wspan12 bg-color1 bg-img1">
+		<p>Aprenda</p>
+	</footer>
+
+	<div class="robot" style="display: none;">
+		<img src="img/bot.png">
+	</div>
+
+	<!--javaScript-->  
+	<script src="js/script.js"></script>
+	<script type="text/javascript">
+
+	$(document).ready(function() {
+	});
+
+	</script>
+
+
+</body>
+
+</html>
+
+
+

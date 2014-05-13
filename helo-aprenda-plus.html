@@ -1,6 +1,6 @@
 <!teste do git!>
 <!DOCTYPE HTML>
-<html lang="pt-br">
+<html lang="pt-br" >
 
 <head>
 	<link rel="stylesheet" href="css/style.css" />
@@ -14,6 +14,7 @@
 		
 		html{
 			overflow: auto;
+			overflow-x: hidden;
 			font-family: arial,sans-serif;
 			/*font-family: 'VT323', arial;*/
 			font-family: arial;
@@ -49,7 +50,6 @@
 		}
 
 		#menu-top{
-			background-color: #364044;
 			overflow: auto;
 			position: fixed;
 			height: 68px;
@@ -107,15 +107,13 @@
 
 
 		#sidebar-left{
+			background-color: #364044;
 			display: block;
 			padding-top: 10px;
 			margin-top: 6px;
 			margin-left: -5px;
 			overflow: hidden;
 			/*position: fixed;*/
-		}
-		#sidebar-left h2{
-			color: white;
 		}
 		#sidebar-left ul{
 			list-style: none;
@@ -160,9 +158,6 @@
 			padding: 14px;
 		}
 
-		.color3{
-			background-color: yellowgreen;
-		}
 		.light{
 			background-color: #F0F0F0;
 		}
@@ -174,93 +169,79 @@
 			top: 80px;
 		}
 
+		/** LOCAL **********************************/
+		section, header, nav{
+			background-color: #F0F0F0;
+		}
+		table>tbody>tr{
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		table>tbody>tr>td:first-child{
+			text-align: right;
+			min-width: 35%;
+		}
+
+		td{
+			padding-top: 10px;
+		}
+
+		h1{
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		body>footer{
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+		}
+
+		body>section{
+			margin-top: 80px;
+		}
+
+		.bt1_tm1{
+			margin-left: 90%;
+			margin-top: 32px;
+		}
+
 	</style>
 </head>
-<body class="color3">
+<body>
 
 	<header class="wspan12" id="menu-top">
 		<a href=""><img src="img/aprenda-plus.png" height="52px" style="margin: 6px;"></a>
-		<nav>
-			<ul>
-				<li id="search"><p><input type="button"><input type="text" value="pesquisar..." class="off" style="width: 75px;"></p></li>
-				<li><a href="#">HOME</a></li>
-				<li><a href="#">HOME</a></li>
-				<li></li>
-			</ul>
-			<div id="status">
-				<input type="button" value="Cadastre-se" class="bt1_tm1" onclick="document.header('www.nata.com');">
-			</div>
-		</nav>
 	</header>
 	
-	<section class="offwspan1 wspan9">
+	<section class="offwspan3 wspan6">
+		<h1 class="text-color1">Cadastro</h1>
 
-		<nav id="sidebar-left" class="wspan3 toLeft">
-			<h2 class="text-color2">Disciplinas</h2>
-			<ul>
-				<li>
-					<a href="#" style="color: red;">MATEM&Aacute;TICA</a>
-					<ul>
-						<li><a href="#">G1</a></li>
-						<li><a href="#">G2</a></li>
-						<li><a href="#">G3</a></li>
-						<li><a href="#">G4</a></li>
-					</ul>
-				</li>
-			</ul>
-			<ul>
-				<li>
-					<a href="#" style="color: yellow;">PORTUGUES</a>
-					<ul>
-						<li><a href="#">G1</a></li>
-						<li><a href="#">G2</a></li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
+		<table>
+			<form method="post">
+				<tbody>
+					<tr> <td>Nome:             </td><td><input type="text" size="30" class="border-color1"></td>	</tr>
+					<tr> <td>E-mail:           </td><td><input type="email" size="30" class="border-color1"></td>	</tr>
+					<tr> <td>Confirmar E-mail: </td><td><input type="email" class="border-color1"></td> </tr>
+					<tr> <td>Data Nascimento:  </td><td><input type="date" class="border-color1"></td> </tr>
+					<tr> <td>Senha: 		   </td><td><input type="password" size="12" class="border-color1"></td>	</tr>
+					<tr> <td>Repetir Senha:    </td><td><input type="password" size="12" class="border-color1"></td>	</tr>
+					<tr>
+						<td colspan="2">
+							<input type="submit" value="Enviar" class="bt1_tm1">
+						</td>
+					</tr>
+				</tbody>
+			</form>
+		</table>
 
-		<section class="offwspan3 wspan9">
-		
-			<h1><img src="img/time-line.png"></h1>
-
-			<article class="article-aula light">
-				<header>
-					<h2 style="color: red;">N&uacute;meros romanos</h2>
-					<img src="img/img1.png">
-				</header>
-				<section>
-					<p>O sistema de numeracao romana (ou números romanos) desenvolveu-se na Roma Antiga e utilizou-se em todo o seu Império. Ele é composto por sete letras maiúsculas do alfabeto latim: I, V, X, L, C, D e M.</p>
-				</section>
-			</article>
-
-			<article class="article-aula wspan6 light to-center">
-				<header>
-					<h2 style="color: yellow;">Vogais</h2>
-					<img src="img/img1.png">
-				</header>
-				<section>
-					<p>bla bla bla bla</p>
-				</section>
-			</article>
-
-			<article class="article-aula light">
-				<header>
-					<h2 style="color: red;">Adi&ccedil;&atilde;o</h2>
-					<img src="img/img1.png">
-				</header>
-				<section>
-					<p>bla bla bla bla</p>
-				</section>
-			</article>
-
-		</section>	
 	</section>
 	
-	<footer class="wspan12">
+	<footer>
 		<p>Aprenda</p>
 	</footer>
 
-	<div class="robot" style="display: none;">
+	<div class="robot">
 		<img src="img/bot.png">
 	</div>
 
@@ -309,10 +290,7 @@
 				ul.animate({"height": 0}, 500);
 				$('#sidebar-left>ul>li>ul').attr("view",false);
 			}
-
 		});
-
-
 	});
 
 	</script>
